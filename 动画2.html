@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>动画2.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		html,body
+		{
+			height: 100%;
+		}
+		body
+		{
+			margin: 0;
+			padding: 0;
+		}
+		.ball-wrap
+		{
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+		.ball
+		{
+			width: 200px;
+			height: 200px;
+			margin-left: -100px;
+			border-radius: 100px;
+			background-color: blue;
+			background-image: radial-gradient(140px at center 40px,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+			position: absolute;
+			left: 50%;
+			top: 30%;
+			animation: move 1.5s infinite;			
+		}
+		.ball-wrap::after
+		{
+			content: '';
+			display: block;
+			position: absolute;
+			left: 50%;
+			bottom: 276px;
+			width: 200px;
+			height: 10px;
+			margin-left: -100px;
+			border-radius: 100px/5px;
+			background-color: #CCC;
+		}
+		.rotate
+		{
+			width: 200px;
+			height: 200px;
+			margin: 200px auto;
+			background-color: yellow;
+			transform: roatte(45deg);
+		}
+		
+		@keyframes move
+		{
+			0%
+			{
+				top: 30px;
+			}
+			50%
+			{
+				top: 180px;
+			}
+			65%
+			{
+				top: 190px;
+			}
+			95%
+			{
+				height: 190px;
+				border-radius: 100px/95px;
+				top: 30px;
+			}
+			100%
+			{
+				height: 190px;
+				border-radius: 100px/95px;
+				top: 30px;
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</style>
+  </head>
+  
+  <body>
+    <div class="roatte"></div>
+    <div class="ball-wrap">
+    	<div class="ball"></div>
+    </div>
+  </body>
+</html>
