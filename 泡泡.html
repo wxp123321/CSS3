@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>泡泡.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+ 	<style type="text/css">
+		body
+		{
+			background-color: pink;
+		} 		
+		.pop
+		{
+			width: 350px;
+			height: 100px;
+			margin: 100px auto;
+			background: url(images/paopao.png) no-repeat top left,
+						url(iamges.paopao.png) no-repeat right bottom #369;
+			border-radius: 15px;
+			transition: all 1s;
+		}
+		.pop:hover
+		{
+			background-position: right bottom,
+								 top, left;
+		}
+ 	</style>
+  </head>
+  
+  <body>
+	<div class="pop"></div>
+  </body>
+</html>
