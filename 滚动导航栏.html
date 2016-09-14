@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>滚动导航栏.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+ 	<style type="text/css">
+ 		*{margin: 0;padding: 0;}
+ 		*::before,
+ 		*::after
+ 		{
+ 			box-sizing: border-box;
+ 		}
+ 		body
+ 		{
+ 			text-align: center;
+ 		}
+ 		
+ 		nav
+ 		{
+ 			display: inline-block;
+ 			margin-top: 100px;
+ 		}
+		nav a
+		{
+			display: inline-block;
+			color: white;
+			text-decoration: none;
+			perspective: 200px;
+		}
+		nav a span
+		{
+			line-height: 40px;
+			background-color: #2195de;
+			display: inline-block;
+			padding: 0 25px;
+			position: relative;
+			transition: all 1s;
+			transform-origin: top;
+			transform-style: preserve-3d;
+		}
+		nav a span::after
+		{
+			content: attr(data-hover);
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background-color: #0965a0;
+			width: 100%;
+			height: 100%;
+			transform: rotateX(-90deg);
+			transform-origin: top;
+		}
+ 		nav a:hover span
+ 		{
+ 			transform: rotateX(90deg) translateY(-20px);
+ 		}
+ 	</style>
+  </head>
+  
+  <body>
+  <nav>
+    <a href="#">
+        <span data-hover="前端学院">传智播客</span>
+    </a>
+    <a href="#">
+        <span data-hover="面向对象">传智播客</span>
+    </a>
+    <a href="#">
+        <span data-hover="前端学院">传智播客</span>
+    </a>
+    <a href="#">
+        <span data-hover="面向对象">传智播客</span>
+    </a>
+    <a href="#">
+        <span data-hover="前端学院">传智播客</span>
+    </a>
+    <a href="#">
+        <span data-hover="面向对象">传智播客</span>
+    </a>
+    <a href="#">
+        <span data-hover="前端学院">传智播客</span>
+    </a>
+    <a href="#">
+        <span data-hover="面向对象">传智播客</span>
+    </a>
+  </nav>
+  </body>
+</html>
